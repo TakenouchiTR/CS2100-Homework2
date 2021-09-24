@@ -1,0 +1,285 @@
+:root {
+  --pet-dark-green: #164955;
+  --pet-med-green: rgba(22, 73, 85, .6);
+  --pet-light-green: rgba(22, 73, 85, .1);
+  --pet-plum: #7e1e5a;
+  --pet-visited: #e9f4f6;
+  --pet-grey: #888;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  line-height: 1.75em;
+}
+
+header {
+  padding: 1em;
+}
+
+main section, footer {
+  padding: 1em;
+}
+
+main a {
+  color: var(--pet-plum);
+  text-decoration: none;
+  font-style: italic;
+}
+
+main a:hover {
+  background-color: var(--pet-plum);
+  color: white;
+}
+
+time {
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+header>img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+}
+
+/* BEGIN: CSS Buttons on the home page 
+
+  WRITE the selectors to IDENTIFY the 
+  rulesets to style the three CSS 
+  "buttons" on the home page.
+  
+  Look at the HTML to see which selector
+  you need to use.
+*/
+
+#styledbuttons {
+  padding: 0;
+  margin: 10px;
+}
+
+#styledbuttons li {
+  margin: 0 0 1em 0;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+#styledbuttons a {
+  display: inline-block;
+  width: 100%;
+  border-radius: .25em;
+  padding: 1em 0 1em 0;
+  font-size: 2em;
+  color: #164955;
+  font-weight: bold;
+  border: 1px groove #6d6d6d;
+  background-color: #ededed;
+}
+
+#styledbuttons img {
+  border: 2px solid #164955;
+  border-radius: 25em;
+  padding: 3px;
+}
+
+nav[aria-label="primary"] {
+  display: flex;
+  flex-direction: column;
+}
+
+nav[aria-label="primary"] a {
+  background-color: var(--pet-dark-green);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1em 2em 1em;
+  border: 2px solid var(--pet-dark-green)
+}
+
+nav[aria-label="primary"] a:hover {
+  background-color: white;
+  color: var(--pet-dark-green);
+}
+
+/* END: CSS Buttons on the home page */
+
+/* BEGIN: The styles governing the secondary navigation 
+
+  MATCH the following selectors with the
+  corresponding ruleset to style the secondary
+  navigation. NOTE: Some selectors may not be
+  used.
+
+  nav[aria-label="secondary"] a
+  nav[aria-label="secondary"] a::last-child
+  nav[aria-label="secondary"] a:last-child
+  nav[aria-label="secondary"] 
+  #secondary a
+  #secondary a::last-child
+  #secondary a:last-child
+  #secondary
+*/
+
+nav[aria-label="secondary"] a {
+  display: inline-block;
+  padding: 5px;
+  color: #6d6d6d;
+  text-decoration: none;
+  border-right: 1px solid #7e1e5a;
+}
+
+nav[aria-label="secondary"] a:last-child {
+  border-right: none;
+}
+
+nav[aria-label="secondary"] {
+  display: none;
+}
+
+/* END: The styles governing the secondary navigation */
+
+main > img {
+  width: 100%;
+}
+
+h2 {
+  color: #7e1e5a;
+}
+
+table {
+  border: 1px solid var(--pet-grey);
+  padding: 0;
+  border-spacing: 0px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+thead {
+  background-color: var(--pet-med-green);
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--pet-light-green);
+}
+
+tfoot {
+  background-color: var(--pet-med-green);
+  color: white;
+}
+
+thead tr th:first-child {
+  border-right: solid 2px rgba(126, 30, 90, .6);
+}
+
+thead tr th:last-child {
+  border-left: solid 2px rgba(126, 30, 90, .6);
+}
+
+tbody tr td {
+  padding: 1em 2em 1em;
+}
+
+th {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+tbody tr td:first-child {
+  border-right: solid 2px rgba(126, 30, 90, .6);
+}
+
+tbody tr td:last-child {
+  border-left: solid 2px rgba(126, 30, 90, .6);
+  text-align: center;
+}
+
+form {
+  border: 1px solid var(--pet-grey);
+}
+
+.section-title {
+  background-color: var(--pet-plum);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.section-title h2{
+  color: white;
+}
+
+.btn {
+  background-color: var(--pet-dark-green);
+}
+
+footer {
+  background-color: var(--pet-dark-green);
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 750px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav[aria-label="primary"] {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  nav[aria-label="primary"] a {
+    flex: 1;
+    text-align: center;
+  }
+
+  nav[aria-label="secondary"] {
+    display: unset;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  nav[aria-label="primary"] a {
+    font-size: 1.5em;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  main > img {
+    grid-column: 1/3;
+  }
+
+  #styledbuttons {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #styledbuttons li {
+    margin: .5em;
+  }
+}
